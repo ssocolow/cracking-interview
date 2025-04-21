@@ -13,3 +13,9 @@
 
 ## Tips
 - Never let your coding skills atrophy
+- read solution even if you get it to see other ways
+- Struggle to solve means solve without answer regardless of time
+- Struggle to solve then when can solve focus on time
+- Put answer into chatgpt and ask to critique and always runtime analyze my solution
+- Leetcode a day
+- The people who have the job worked for it
