@@ -1,5 +1,5 @@
 # cracking-interview
-consistency is key - aim to accomplish in the morning. Focus.
+consistency is key - aim to accomplish in the morning.
 
 ## guidelines
 first try to solve
