@@ -1,10 +1,10 @@
 # cracking-interview
-consistency is key - aim to accomplish in the morning.
+consistency is key.
 
 ## guidelines
-first try to solve
+first try to solve solo.
 if stuck longer than a while, ask gemini  for a hint.
 
 progress over perfection
 talk with friends
-build sometjing + be yourself
+build something + be yourself
