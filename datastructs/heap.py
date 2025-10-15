@@ -198,7 +198,78 @@ class MinHeap:
     def __str__(self):
         return str(self.heap)
         
-        
+
+class MaxHeap:
+    def __init__(self):
+        self.heap = []
+
+    def add(self, item):
+        self.heap.append(item)
+        self._bubbleup(len(self.heap)-1)
+    
+    def _bubbleup(self, index):
+        parent = (index - 1) // 2
+        while index > 0 and self.heap[parent] < self.heap[index]:
+            tmp = self.heap[parent]
+            self.heap[parent] = self.heap[index]
+            self.heap[index] = tmp
+            index = parent
+            parent = (index - 1) // 2
+    
+    def getMax(self):
+        if not self.heap:
+            return None
+        else:
+            return self.heap[0]
+    
+    def pop(self):
+        if len(self.heap) == 0:
+            return None
+        elif len(self.heap) == 1:
+            return self.heap.pop()
+        else:
+            ret = self.heap[0]
+            lastEl = self.heap.pop()
+            self.heap[0] = lastEl
+            self.heapify_down()
+            return ret
+    
+    def heapify_down(self):
+        i = 0
+        # while the element has a left child
+        while i < len(self.heap):
+            leftChild = 2 * i + 1
+            rightChild = 2 * i + 2
+            
+            biggestChild = i
+            size = len(self.heap)
+            if leftChild < size and self.heap[leftChild] > self.heap[biggestChild]:
+                biggestChild = leftChild
+            if rightChild < size and self.heap[rightChild] > self.heap[biggestChild]:
+                biggestChild = rightChild
+            if biggestChild != i:
+                # swap i with biggestChild
+                self.heap[i], self.heap[biggestChild] = self.heap[biggestChild], self.heap[i]
+                i = biggestChild
+            else:
+                break
+
+    def __str__(self):
+        return str(self.heap)
+
+
+
+mh = MaxHeap()
+mh.add(8)
+mh.add(2)
+mh.add(4)
+print(mh)
+mh.add(10)
+print(mh)
+mh.pop()
+print(mh)
+
+
 h = MinHeap()
 h.add(3)
 h.add(2)
